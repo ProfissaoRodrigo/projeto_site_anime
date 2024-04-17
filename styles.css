@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +7,14 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
 }
 
 header {
-    background-color: #333;
+    background-image: url('japanese_roverb_calligraphy.gif');
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -19,7 +23,7 @@ header {
 }
 
 header img {
-    width: 150px;
+    width: 150px; /* Ajuste o tamanho conforme necessário */
     height: auto;
 }
 
@@ -36,11 +40,12 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Adicionei a fonte aqui */
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ff6600;
+    color: #ff6600; /* Cor quando o mouse passa por cima */
 }
 
 main {

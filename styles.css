@@ -12,10 +12,10 @@ body {
 }
 
 header {
-    background-image: url('japanese_roverb_calligraphy.gif');
+    background-image: url('anime_banner.jpg');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #ffffff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ header {
 }
 
 header img {
-    width: 150px; /* Ajuste o tamanho conforme necessário */
+    width: 150px;
     height: auto;
 }
 
@@ -38,7 +38,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
     font-family: 'Roboto', sans-serif; /* Adicionei a fonte aqui */
     transition: color 0.3s ease;

@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: 'Gang of Tree';
+    src: url('gang_of_tree.ttf') format('truetype'); 
+}
 
 * {
     margin: 0;
@@ -7,7 +10,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gang of Tree', sans-serif; /* Aplicando a fonte personalizada */
     line-height: 1.6;
 }
 
@@ -15,7 +18,7 @@ header {
     background-image: url('anime_banner.jpg');
     background-size: cover;
     background-position: center;
-    color: #ffffff;
+    color: #090000;
     padding: 20px;
     display: flex;
     justify-content: space-between;

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'GangOfTree';
-    src: url('gang_of_tree.ttf') format('truetype');
+    src: <url ('Arquivos/Fontes/gang_of_tree.ttf')> format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    background-image: url('anime_banner.png');
+    background-image: url('Arquivos/Mídias/Imagens/Estilização/anime_banner.png');
     background-size: cover;
     background-position: center;
     color: #090000;

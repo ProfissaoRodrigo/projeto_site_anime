@@ -1,0 +1,14 @@
+header {
+    background-image: url(../Mídias/Estilização/Imagens/anime_banner.png);
+    background-size: 100%;
+    background-position: center;
+    color: #090000;
+    padding: cover; /* 'cover' não é um valor válido para 'padding'. Talvez você quis dizer 'background-size: cover;'? */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Adiciona o header fixo no topo */
+    top: 0; /* Define a posição do topo para 0 */
+    left: 0; /* Define a posição esquerda para 0 */
+    width: 100%; /* Garante que o header se estenda por toda a largura da página */
+}

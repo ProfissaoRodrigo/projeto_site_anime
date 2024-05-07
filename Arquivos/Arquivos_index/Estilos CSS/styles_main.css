@@ -24,3 +24,94 @@ main {
         z-index: -1;
       }   
 }
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: pulse 5s infinite alternate; /* Adiciona animação de pulsação */
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  .popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    background-color: #000000bf;
+    padding: 20px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    animation: slideIn 0.5s ease forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .popup-form h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #f294edcc;
+  }
+  
+  .popup-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ddd2f1e5;
+  }
+  
+  .popup-form input[type="text"],
+  .popup-form input[type="email"],
+  .popup-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .popup-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .popup-form button:hover {
+    background-color: #0056b3;
+  }

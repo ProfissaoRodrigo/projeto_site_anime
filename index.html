@@ -1,155 +1,832 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anihon Go!</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
-<link rel="stylesheet" href="./Arquivos/Arquivos_index/Estilos CSS/style_carrossel.css">
-<link rel="stylesheet" href="./Arquivos/Arquivos_index/Estilos CSS/styles_header.css">
-<link rel="stylesheet" href="./Arquivos/Arquivos_index/Estilos CSS/styles_main.css">
-<link rel="stylesheet" href="./Arquivos/Arquivos_index/Estilos CSS/styles_footer.css">
-<link rel="stylesheet" type="text/css" href="./Arquivos/Arquivos_index/Estilos CSS/slick-theme.css"/>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="css/style_carrossel.css">
+    <link rel="stylesheet" href="css/styles_header.css">
+    <link rel="stylesheet" href="css/styles_main.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+          background-image: url('./img/Estilização/Imagens/white-anime.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
 </head>
-<header>
-  <a href="index.html"><img src="./Arquivos/Arquivos_index/Mídias/Estilização/Imagens/anihon_go!_logo.png" alt="Logotipo Anihon Go!"></a>
-  <div id="menu-toggle">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-  <nav>
-    <ul>
-        <li><a href="./Animes.html">Animes</a></li>
-        <li><a href="./Mangas.html">Mangás</a></li>
-        <li><a href="./Notícias.html">Notícias</a></li>
-        <li><a href="./Galeria.html">Galeria</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
+
 <body>
-<section class="game-section">
-  <h2 class="line-title">Trending Animes</h2>
-  <div class="owl-carousel custom-carousel owl-theme">
-    <div class="item active" style="background-image: url(./Arquivos/Arquivos_index/Mídias/Imagens/Banco_de_Imagens/anime-my-hero-academia-saison-7-visuel-3.webp);">
-      <div class="item-desc">
-        <h3>Boku no Hero 7ª Temporada</h3>
-        <p>Em um mundo dominado por superpoderes, Izuku Midoriya, um jovem sem poderes, sonha em se tornar um herói.
-          Após um encontro com o lendário All Might,
-          Izuku recebe o poderoso Quirk "One For All" e ingressa na U.A.
-          High School para treinar e se tornar o próximo Símbolo da Paz.
-          Sua jornada é marcada por desafios, desde dominar o One For All
-          até enfrentar vilões e superar suas próprias dúvidas.</p>
-          <button>Assista Já!</button>
-      </div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
-    <div class="item" style="background-image: url(./Arquivos/Arquivos_index/Mídias/Imagens/Banco_de_Imagens/tensei_shitara_slime_datta_ken_3.jpg);">
-      <div class="item-desc">
-        <h3>Tensei Shitara Slime Datta Ken 3ª Temporada</h3>
-        <p>A história segue Satoru Mikami, um homem comum que é morto e
-          reencarna em um mundo de fantasia como um slime (um monstro gelatinoso).
-          Lá, ele adquire várias habilidades únicas e faz amizade com uma variedade
-          de criaturas enquanto tenta construir um mundo melhor para todos.
-          Acompanhe a jornada de Rimuru Tempest enquanto ele desenvolve suas habilidades,
-          faz aliados poderosos e enfrenta desafios cada vez maiores, ganhando reconhecimento e respeito ao longo do caminho.</p>
-          <button>Assista Já!</button>
-      </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <video width="auto" height="60" autoplay muted>
+                            <source src="./videos/Logo-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Principal</a></li>
+                                <li><a href="./animes.html">Categorias<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./animes.html">Animes</a></li>
+                                        <li><a href="./mangas.html">Mangás</a></li>
+                                        <li><a href="./noticias.html">Notícias</a></li>
+                                        <li><a href="./galeria.html">Galeria</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Guilda</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        <a href="./login.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <div class="floating-button" onclick="togglePopup()">
+        <img src="img/Estilização/Imagens/anny_icone.png" alt="Icon" class="button-icon">
     </div>
-    <div class="item" style="background-image: url(./Arquivos/Arquivos_index/Mídias/Imagens/Banco_de_Imagens/Kono_Subarashii_Sekai_ni_Shukufuku_wo!_3.jpg);">
-      <div class="item-desc">
-        <h3>Kono Subarashii Sekai ni Shukufuku wo! 3ª Temporada</h3>
-        <p>Kazuma Satou, um estudante recluso,
-          morre de forma ridícula e é apresentado à deusa Aqua.
-          Ele escolhe reencarnar em um mundo de fantasia e derrotar o Rei Demônio.
-          No entanto, ele comete o erro de escolher Aqua como seu item de apoio,
-          que se revela completamente inútil.A vida nesse mundo é dura e nada como em um jogo.
-          Kazuma e Aqua precisam trabalhar para pagar suas contas antes de partirem em sua aventura.
-          Eles enfrentam muitos infortúnios e desafios pela frente.</p>
-          <button>Assista Já!</button>
-      </div>
+    
+    <div class="popup-form" id="popupForm">
+        <h2>
+            <p><strong>いらっしゃいませ! (Irasshaimase!)</strong></p>
+            <p>Eu sou a Anny, a assistente virtual do site.</p>
+            <p>Para críticas, dúvidas, sugestões ou apenas conversar sobre animes... Escreve aí! ✌️😘</p>
+        </h2>
+        <div class="popup-content">
+            <img src="img/Estilização/Imagens/annycomp.jpg" alt="Contact Image" class="popup-image">
+            <div class="form-fields">
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="item" style="background-image: url(./Arquivos/Arquivos_index/Mídias/Imagens/Banco_de_Imagens/mashle_keyvisual2-scaled.webp);">
-      <div class="item-desc">
-        <h3>Mashle 2ª Temporada</h3>
-        <p>Em um mundo dominado pela magia, Mash,
-          um jovem sem poderes mágicos, treina sua força física
-          para se tornar um Visionário Divino. Na Escola de Magia Easton,
-          ele esconde sua falta de magia e enfrenta diversos desafios:
-          oponentes poderosos, segredos obscuros e a luta por um mundo mais justo.</p>
-          <button>Assista Já!</button>
-      </div>
+    
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__slider owl-carousel">
+                <div class="hero__items set-bg" data-setbg="img/Imagens/Banco/demonslayer4temporada.avif">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label"><strong>Ação</strong></div>
+                                <h2>Kimetsu no Yaiba - Hashira Geiko Hen</h2>
+                                <p><strong> Na quarta temporada, as chamas da batalha ardem mais intensamente!
+                                    Tanjiro e seus companheiros enfrentam demônios imparáveis,
+                                    treinando incansavelmente para salvar a humanidade.
+                                    Prepare-se para lutas épicas, segredos sombrios e determinação inabalável
+                                    enquanto eles se preparam para o confronto final com o sinistro Muzan Kibutsuji!</strong></p>
+                                <a href="#"><span>Assista Já!</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg" data-setbg="img/Imagens/Banco/my-hero-academia-saison-7.webp">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label"><strong>Ação</strong></div>
+                                <h2>Boku no Hero Academia 7 - Memories</h2>
+                                <p><strong>A sétima temporada de "Boku no Hero" promete muita emoção e ação!
+                                    Deku e seus amigos enfrentam novos desafios enquanto se recuperam
+                                    dos eventos devastadores anteriores. A Liga dos Vilões está mais poderosa,
+                                    mas uma nova força misteriosa ameaça a todos.
+                                    Revelações sobre a One For All e o All For One surgem, trazendo segredos sombrios à tona.
+                                    Com batalhas intensas, alianças improváveis e decisões difíceis,
+                                    Deku precisa dominar seu poder e liderar seus colegas em missões arriscadas.
+                                    Prepare-se para uma temporada repleta de adrenalina e revelações chocantes!</strong></p>
+                                <a href="#"><span>Assista Já!</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg" data-setbg="img/Imagens/Banco/tensei_shitara_slime_datta_ken_3.jpg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label"><strong>Ação</strong></div>
+                                <h2>Tensei Shitara Slime Datta Ken 3</h2>
+                                <p><strong>A terceira temporada de "Tensei Shitara Slime Datta Ken" promete aventuras épicas e intensas!
+                                    Rimuru Tempest continua a expandir sua nação de monstros,
+                                    enfrentando novos desafios e ameaças de reinos vizinhos. Com conflitos políticos,
+                                    batalhas contra antigos inimigos e a busca por respostas sobre seu verdadeiro propósito,
+                                    a temporada oferece animação deslumbrante, combates emocionantes e reviravoltas surpreendentes.
+                                    Prepare-se para uma mistura perfeita de ação, magia e desenvolvimento de personagens!</strong></p>
+                                <a href="#"><span>Assista Já!</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg" data-setbg="img/Imagens/Banco/Kono_Subarashii_Sekai_ni_Shukufuku_wo!_3.jpg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label"><strong>Aventura</strong></div>
+                                <h2>Kono Subarashii Sekai ni Shukufuku wo 3</h2>
+                                <p><strong>A terceira temporada está repleta de risadas e aventuras hilárias!
+                                    Kazuma, Aqua, Megumin e Darkness continuam suas desventuras no mundo fantástico,
+                                    enfrentando novos monstros e desafios ridículos. Kazuma ainda tenta sobreviver com seus amigos excêntricos,
+                                    enquanto suas tentativas de levar uma vida tranquila são constantemente arruinadas
+                                    pelas confusões causadas por Aqua e os feitiços explosivos de Megumin.
+                                    Novos personagens entram em cena, trazendo mais caos e situações cômicas.
+                                    As missões ficam mais absurdas e as piadas mais afiadas, mantendo o humor que os fãs adoram.
+                                    Entre batalhas cômicas e momentos de pura loucura, a temporada promete muita diversão e reviravoltas inesperadas.                                    
+                                    Prepare-se para mais risadas e aventuras nonsenses na terceira temporada de "KonoSuba",
+                                    onde cada episódio é uma garantia de entretenimento!</strong></p>
+                                <a href="#"><span>Assista Já!</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="trending__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Trending Animes</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="#" class="primary-btn">Veja todos<span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-1.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 357</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Ação</li>
+                                            <li>Shounen</li>
+                                            <li>Fantasia</li>
+                                            <li>Sobrenatural</li>
+                                        </ul>
+                                        <h5><a href="#">Kimetsu no Yaiba - Hashira Geiko Hen 4ª Temporada</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-2.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 245</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 10441</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Ação</li>
+                                            <li>Shounen</li>
+                                            <li>Super Poderes</li>
+                                            <li>Vida Escolar</li>
+                                        </ul>
+                                        <h5><a href="#">Boku no Hero Academia 7 - Memories</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-3.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 56</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 8413</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Ação</li>
+                                            <li>Aventura</li>
+                                            <li>Comédia</li>
+                                            <li>Fantasia</li>
+                                        </ul>
+                                        <h5><a href="#">Tensei Shitara Slime Datta Ken 3</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-4.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 34</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 7561</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Aventura</li>
+                                            <li>Comédia</li>
+                                            <li>Fantasia</li>
+                                            <li>Isekai</li>
+                                        </ul>
+                                        <h5><a href="#">Kono Subarashii Sekai ni Shukufuku wo! 3ª Temporada</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-5.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 26</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 6851</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Ação</li>
+                                            <li>Aventura</li>
+                                            <li>Comédia</li>
+                                            <li>Isekai</li>
+                                        </ul>
+                                        <h5><a href="#">Tsuki ga Michibiku Isekai Douchuu 2</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/trending/trend-6.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 156</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9188</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Ação</li>
+                                            <li>Comédia</li>
+                                            <li>Fantasia</li>
+                                            <li>Shounen</li>
+                                        </ul>
+                                        <h5><a href="#">Mashle 2ª Temporada</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Descobertas 2024</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="#" class="primary-btn">Veja Todos<span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-1.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 15</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 521</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Drama</li>
+                                            <li>Mistério</li>
+                                            <li>Histórico</li>
+                                        </ul>
+                                        <h5><a href="#">Kusuriya no Hito (The Apothecary Diaries) - 1ª Temporada</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-2.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 10</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Aventura</li>
+                                            <li>Ação</li>
+                                            <li>Drama</li>
+                                        </ul>
+                                        <h5><a href="#">Megumi no Daigo: Kyuukoku no Orange</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-3.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 25</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 233</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Aventura</li>
+                                            <li>Drama</li>
+                                            <li>Fantasia</li>
+                                            <li>Shounen</li>
+                                        </ul>
+                                        <h5><a href="#">Sousou no Frieren</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-4.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 56</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 245</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Esportes</li>
+                                        </ul>
+                                        <h5><a href="#">Highspeed Etoile</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-5.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 44</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 356</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Comédia</li>
+                                            <li>Sobrenatural</li>
+                                            <li>Vampiro</li>
+                                            <li>Shounen</li>
+                                        </ul>
+                                        <h5><a href="#">Kyūketsuki wa Sugu Shinu</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/popular/popular-6.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 28</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 358</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Ação</li>
+                                            <li>Aventura</li>
+                                            <li>Fantasia</li>
+                                        </ul>
+                                        <h5><a href="#">Saihate no Paladin</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Últimos Filmes</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="#" class="primary-btn">Veja todos <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-1.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 223</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 19141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Acão</li>
+                                            <li>Aventura</li>
+                                            <li>Comédia</li>
+                                            <li>Fantasia</li>
+                                        </ul>
+                                        <h5><a href="#">One Piece Film: RED</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-2.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 151</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 18141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Acão</li>
+                                            <li>Fantasia</li>
+                                            <li>Comédia</li>
+                                            <li>Shounen</li>
+                                        </ul>
+                                        <h5><a href="#">Black Clover: Mahou Tei no Ken</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-3.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 167</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 23141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Acão</li>
+                                            <li>Aventura</li>
+                                            <li>Comédia</li>
+                                            <li>Isekai</li>
+                                        </ul>
+                                        <h5><a href="#">Tensei Shitara Slime Datta Ken Movie: Guren no Kizuna-hen</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-4.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 351</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 32141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Acão</li>
+                                            <li>Aventura</li>
+                                            <li>Comédia</li>
+                                            <li>Fantasia</li>
+                                        </ul>
+                                        <h5><a href="#">One Piece: Dai Tokushuu! Momonosuke no Mei Shogun e no Michi</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-5.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 119</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 8541</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Acão</li>
+                                            <li>Aventura</li>
+                                            <li>Comédia</li>
+                                            <li>Fantasia</li>
+                                        </ul>
+                                        <h5><a href="#">Dragon Ball Super: Super Hero</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/recent/recent-6.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 11157</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Acão</li>
+                                            <li>Aventura</li>
+                                            <li>Romance</li>
+                                            <li>Fantasia</li>
+                                        </ul>
+                                        <h5><a href="#">Sword Art Online: Progressive Movie - Kuraki Yuuyami no Scherzo</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="live__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Últimos Live Action</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="#" class="primary-btn">Veja todos <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-1.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 15</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">City Hunter</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-2.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 181</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 941</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">One Piece</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-3.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 125</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 845</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">Yu Yu Hakusho</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-4.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 235</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 745</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">Attack on Titan: The Final Season</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-5.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 223</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 685</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">Sword Art Online</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="img/live/live-6.jpg">
+                                        <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 366</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 7856</div>
+                                    </div>
+                                    <div class="product__item__text">
+
+                                        <h5><a href="#">Naruto</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="product__sidebar">
+                        <div class="product__sidebar__view">
+                            <div class="section-title">
+                                <h5>Mais Vistos</h5>
+                            </div>
+                            <ul class="filter__controls">
+                                <li class="active" data-filter="*">Dia</li>
+                                <li data-filter=".week">Semana</li>
+                                <li data-filter=".month">Mês</li>
+                                <li data-filter=".years">Ano</li>
+                            </ul>
+                            <div class="filter__gallery">
+                                <div class="product__sidebar__view__item set-bg mix day years"
+                                data-setbg="img/sidebar/tv-1.jpg">
+                                <div class="ep">18 / ?</div>
+                                <div class="view"><i class="fa fa-eye"></i> 7141</div>
+                                <h5><a href="#">Boruto: Naruto next generations</a></h5>
+                            </div>
+                            <div class="product__sidebar__view__item set-bg mix month week"
+                            data-setbg="img/sidebar/tv-2.jpg">
+                            <div class="ep">18 / ?</div>
+                            <div class="view"><i class="fa fa-eye"></i> 6141</div>
+                            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                        </div>
+                        <div class="product__sidebar__view__item set-bg mix week years"
+                        data-setbg="img/sidebar/tv-3.jpg">
+                        <div class="ep">18 / ?</div>
+                        <div class="view"><i class="fa fa-eye"></i> 5141</div>
+                        <h5><a href="#">Sword art online alicization war of underworld</a></h5>
+                    </div>
+                    <div class="product__sidebar__view__item set-bg mix years month"
+                    data-setbg="img/sidebar/tv-4.jpg">
+                    <div class="ep">18 / ?</div>
+                    <div class="view"><i class="fa fa-eye"></i> 6241</div>
+                    <h5><a href="#">Fate/stay night: Heaven's Feel I. presage flower</a></h5>
+                </div>
+                <div class="product__sidebar__view__item set-bg mix day"
+                data-setbg="img/sidebar/tv-5.jpg">
+                <div class="ep">18 / ?</div>
+                <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                <h5><a href="#">Fate stay night unlimited blade works</a></h5>
+            </div>
+        </div>
     </div>
-    <div class="item" style="background-image: url(./Arquivos/Arquivos_index/Mídias/Imagens/Banco_de_Imagens/anime-saint-seiya-Knights-of-the-Zodiac-saison-2-Battle-for-Sanctuary-visuel-1-1024x1536.webp);">
-      <div class="item-desc">
-        <h3>Knights of the Zodiac - Saint Seiya Battle for Sanctuary Part 2</h3>
-        <p>A história gira em torno da deusa Atena, reencarnada na Terra,
-          que é o foco de uma profecia que a coloca em desvantagem em uma guerra contra Poseidon e Hades,
-          o que poderia levar ao fim da humanidade. Para protegê-la,
-          surgem os Cavaleiros do Zodíaco, entre eles Seiya, o Cavaleiro de Pégasus.
-          Após ser gravemente ferida por uma flecha, Seiya e os outros Cavaleiros de Bronze
-          têm um prazo de doze horas para atravessar o Santuário e vencer os poderosos Cavaleiros de Ouro,
-          numa corrida contra o tempo para salvar sua deusa e a humanidade.</p>
-          <button>Assista Já!</button>
-      </div>
+    <div class="product__sidebar__comment">
+        <div class="section-title">
+            <h5>Novos Comentários</h5>
+        </div>
+        <div class="product__sidebar__comment__item">
+            <div class="product__sidebar__comment__item__pic">
+                <img src="img/sidebar/comment-1.jpg" alt="">
+            </div>
+            <div class="product__sidebar__comment__item__text">
+                <ul>
+                    <li>Active</li>
+                    <li>Movie</li>
+                </ul>
+                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
+            </div>
+        </div>
+        <div class="product__sidebar__comment__item">
+            <div class="product__sidebar__comment__item__pic">
+                <img src="img/sidebar/comment-2.jpg" alt="">
+            </div>
+            <div class="product__sidebar__comment__item__text">
+                <ul>
+                    <li>Active</li>
+                    <li>Movie</li>
+                </ul>
+                <h5><a href="#">Gintama.:Shirogane Tamashii hen Kouhan sen</a></h5>
+                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
+            </div>
+        </div>
+        <div class="product__sidebar__comment__item">
+            <div class="product__sidebar__comment__item__pic">
+                <img src="img/sidebar/comment-3.jpg" alt="">
+            </div>
+            <div class="product__sidebar__comment__item__text">
+                <ul>
+                    <li>Active</li>
+                    <li>Movie</li>
+                </ul>
+                <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
+                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
+            </div>
+        </div>
+        <div class="product__sidebar__comment__item">
+            <div class="product__sidebar__comment__item__pic">
+                <img src="img/sidebar/comment-4.jpg" alt="">
+            </div>
+            <div class="product__sidebar__comment__item__text">
+                <ul>
+                    <li>Active</li>
+                    <li>Movie</li>
+                </ul>
+                <h5><a href="#">Monogatari Series: Second Season</a></h5>
+                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
+            </div>
+        </div>
     </div>
-    <div class="item" style="background-image: url(./Arquivos/Arquivos_index/Mídias/Imagens/Banco_de_Imagens/highspeed_etoile.jpg);">
-      <div class="item-desc">
-        <h3>Highspeed Étoile 1ª Temporada</h3>
-        <p>Num futuro próximo, um evento de corrida de próxima
-          geração chamado NEX Race é anunciado, mudando o rumo das corridas. Rin Rindo,
-          que sonhava em ser uma bailarina antes de ser impedida de continuar por causa de uma lesão,
-          aceitou uma vida de calmaria com seu vó, até que inesperadamente foi empurrada para o mundo
-          das corridas de alta velocidade. Agora ela enfrenta uma realidade cheia de adrenalina na NEX Race,
-          com velocidades acima de 500 km/h.</p>
-          <button>Assista Já!</button>
-      </div>
-    </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<video autoplay muted loop id="bg-video">
-  <source src="./Arquivos/Arquivos_index/Mídias/Estilização/Imagens/incomplete-malevolent-shrine-sukuna-jujutsu-kaisen-moewalls-com.mp4" type="video/mp4">
-</video>
-<div class="floating-button" id="floatingButton">
-  <img src="./Arquivos/Arquivos_index/Mídias/Estilização/Imagens/anny_icone.png" alt="Icon">
+<!-- Product Section End -->
+
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="page-up">
+        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="footer__logo">
+                    <a href="./index.html"><img src="img/Estilização/Imagens/anihon_go!_logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="footer__nav">
+                    <ul>
+                        <li class="active"><a href="./index.html">Principal</a></li>
+                        <li><a href="./animes.html">Animes</a></li>
+                        <li><a href="./mangas.html">Mangás</a></li>
+                        <li><a href="./noticias.html">Notícias</a></li>
+                        <li><a href="./galeria.html">Galeria</a></li>
+                        <li><a href="#">Guilda</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  <!-- Search model Begin -->
+  <div class="search-model">
+    <div class="h-00 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch"><i class="icon_close"></i></div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Procure Aqui .....">
+        </form>
+    </div>
 </div>
-<div class="floating-button" id="floatingButton">
-  <img src="./Arquivos/Arquivos_index/Mídias/Estilização/Imagens/anny_icone.png" alt="Icon">
-</div>
-<div class="popup-form" id="popupForm">
-  <h2>Para críticas, dúvidas, sugestões ou apenas conversar sobre animes... Fale com a Anny!</h2>
-  <form action="#">
-    <label for="nickname">Nickname:</label>
-    <input type="text" id="nickname" name="nickname" required>
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required>
-    <label for="message">Mensagem:</label>
-    <textarea id="message" name="message" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</div>
-<div class="your-class">
-  <div>your content</div>
-  <div>your content</div>
-  <div>your content</div>
-</div>
-<script src="./Arquivos/Arquivos_index/Estilos_JavaScript/scripts_index.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-<script  src="./Arquivos/Arquivos_index/Estilos_JavaScript/script_carrossel.js"></script>
-<script type="text/javascript" src="./Arquivos/Arquivos_index/Estilos_JavaScript/slick.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.your-class').slick({
-      setting-name: setting-value
-    });
-  });
+<!-- Search model end -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/player.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/scripts_form.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script>
+    function togglePopup() {
+        var popup = document.getElementById('popupForm');
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            popup.style.display = 'block';
+        }
+    }
 </script>
 
 </body>
-</main>
+
 </html>

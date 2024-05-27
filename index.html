@@ -8,12 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anihon Go!</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kosugi&display=swap" rel="stylesheet">
 
-    <!-- Css Styles -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -24,8 +25,6 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
     <link rel="stylesheet" href="css/style_carrossel.css">
-    <link rel="stylesheet" href="css/styles_header.css">
-    <link rel="stylesheet" href="css/styles_main.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
         body {
@@ -38,12 +37,10 @@
 </head>
 
 <body>
-    <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
     <header class="header">
         <div class="container">
             <div class="row">
@@ -67,7 +64,7 @@
                                         <li><a href="./galeria.html">Galeria</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Guilda</a></li>
+                                <li><a href="guilda.html">Guilda</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -82,7 +79,6 @@
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>
-    <!-- Header End -->
 
     <div class="floating-button" onclick="togglePopup()">
         <img src="img/Estilização/Imagens/anny_icone.png" alt="Icon" class="button-icon">
@@ -99,8 +95,7 @@
             <div class="form-fields">
                 <form id="contactForm" onsubmit="submitForm(event)">
                     <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
-                    
+                    <input type="text" id="name" name="name" required>                    
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     
@@ -113,7 +108,6 @@
         </div>
     </div>
     
-    <!-- Hero Section Begin -->
     <section class="hero">
         <div class="container">
             <div class="hero__slider owl-carousel">
@@ -193,9 +187,7 @@
             </div>
         </div>
     </section>
-    <!-- Hero Section End -->
 
-    <!-- Product Section Begin -->
     <section class="product spad">
         <div class="container">
             <div class="row">
@@ -758,14 +750,119 @@
             </div>
         </div>
     </div>
+
+    <div class="blog__details__btns">
+        <div class="blog__details__comment">
+            <h4>3 Comentários</h4>
+            <div class="blog__details__comment__item">
+                <div class="blog__details__comment__item__pic">
+                    <img src="./img/blog/details/comment-1.png" alt="">
+                </div>
+                <div class="blog__details__comment__item__text">
+                    <span>Abril 22, 2024</span>
+                    <h5>Enzo Uzumaki</h5>
+                    <p>Acabei de ver o novo episódio de Boruto e foi incrível! 😍
+                        A luta do Boruto e Kawaki contra o vilão foi épica, e o novo jutsu do Boruto foi demais!
+                        🔥 Mal posso esperar pelo próximo episódio! 💥</p>
+                        <a href="#">Curtir 👍</a>
+                        <a href="#">Compartilhar ➡️</a>
+                </div>
+            </div>
+            <div class="blog__details__comment__item blog__details__comment__item--reply">
+                <div class="blog__details__comment__item__pic">
+                    <img src="img/blog/details/comment-2.png" alt="">
+                </div>
+                <div class="blog__details__comment__item__text">
+                    <span>Abril 27, 2024</span>
+                    <h5>Mina Nara</h5>
+                    <p>Nossa, Enzo! Eu também achei demais! 😃
+                        A química entre Boruto e Kawaki está ficando incrível.
+                        E aquele novo jutsu? Sério, estou tão animada para ver o que vem a seguir! 💖</p>
+                    <a href="#">Curtir 👍</a>
+                    <a href="#">Compartilhar➡️</a>
+                </div>
+            </div>
+            <div class="blog__details__comment__item">
+                <div class="blog__details__comment__item__pic">
+                    <img src="img/blog/details/comment-3.png" alt="">
+                </div>
+                <div class="blog__details__comment__item__text">
+                    <span>Maio 15, 2024</span>
+                    <h5>Lucas Liones</h5>
+                    <p>Galera, acabei de ver o filme de Nanatsu no Taisai e estou completamente impressionado!
+                        As lutas foram incríveis, o Meliodas e o Ban deram um show à parte.
+                        A história da Elizabeth também foi bem bacana. Recomendo demais!                        
+                        #NanatsuNoTaisai</p>
+                    <a href="#">Curtir 👍</a>
+                    <a href="#">Compartilhar ➡️</a>
+                </div>
+            </div>
+        </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Product Section End -->
 
-<!-- Footer Section Begin -->
+<div class="section-title-news">
+    <h1>Últimas Notícias</h1>
+</div>
+<div class="col-lg-8">
+    <div class="blog-news-content-title">
+        <div class="blog-news-text-title">
+            <p></p>
+            <p>**Temporada de Primavera dos Animes Japoneses Promete Surpreender!**</p>
+            <p>A temporada de primavera dos animes e mangás já começou no Japão, trazendo uma avalanche de novas histórias e continuações muito aguardadas!
+                Prepare-se para aventuras emocionantes, comédias hilariantes e dramas cativantes que irão conquistar o coração dos fãs de anime em todo o mundo.
+            <br>Entre os destaques, temos a tão esperada nova temporada de "Boku no Hero Academia", que promete continuar a saga heroica de Deku e seus amigos da U.A. High School.
+                Além disso, "Tensei Shitara Slime Datta Ken" retorna com mais aventuras do slime favorito de todos, Rimuru Tempest, em um mundo de fantasia cheio de ação e magia.
+            <br>Para os fãs de comédia, "Kono Subarashii Sekai ni Shukufuku wo" está de volta com mais trapalhadas e confusões de Kazuma e sua equipe excêntrica.
+                Este é um must-watch para quem adora rir sem parar!
+            <br>Não perca também as estreias de novos animes que já estão gerando burburinho, como "Oshi no Ko", uma história intrigante que mistura drama e mistério no mundo do entretenimento,
+                e "Yuusha, Yamemasu", uma comédia romântica que promete derreter corações com seu charme.
+            <br> Prepare sua lista de animes, faça a pipoca e fique de olho nas plataformas de streaming, porque a temporada de primavera está recheada de emoções e surpresas!
+                Não deixe de acompanhar todas as novidades e comentar com seus amigos sobre os episódios mais épicos. Vamos celebrar juntos essa festa de criatividade e imaginação que só os animes podem proporcionar!</p>
+        </div>
+        <div class="blog__news__item__text">
+            <h4>“Mayonaka Heart Tune”: Sucesso entre os mangás atingiu 100 mil cópias</h4>
+            <img src="img/blog/details/news-Mayonaka-Heart-Tune.jpg.jpg" alt="">
+            <p>A série de mangá Mayonaka Heart Tune (Tune In to the Midnight Heart), criada por Masakuni Igarashi, o mesmo autor de “Senryuu Girl”,
+                já alcançou o marco notável de 100.000 cópias em circulação com apenas os volumes 1 ao 3.
+                <br> A história é uma comédia romântica que promete tocar o coração dos leitores de maneira envolvente e divertida.</p>
+        </div>
+        <div class="blog__news__item__text">
+            <h4>Ranking dos 10 Mangás mais vendidos em Janeiro de 2024</h4>
+            <img src="img/blog/details/news-Jujutsu_Kaisen_0.jpg" alt="">
+            <p>O popular site da Oricon revelou o ranking (lista) dos 10 mangás mais vendidos de janeiro de 2024.
+                Portanto a lista revelada filtrou o período de 15 até 21 de janeiro de 2024 com destaque para “Jujutsu Kaisen”,
+                “Frieren: Beyond Journey’s End” e “The Apothecary Diaries”.</p>
+        </div>
+        <div class="blog__news__item__text">
+            <h4>Anime “Silver Lining”</h4>
+            <img src="img/blog/details/news-silver_lining.jpg" alt="">
+            <p>Uma nova série de anime original intitulada “Silver Lining” foi anunciada para estrear no outono de 2024.
+                A produção, que promete trazer uma história emocionante e inovadora, já está gerando grande expectativa entre os fãs.
+                Com uma equipe talentosa e uma trama envolvente, "Silver Lining" tem tudo para se tornar um dos destaques da próxima temporada.
+                Fique atento para mais novidades sobre este aguardado lançamento!</p>
+        </div>
+        <div class="blog__news__item__text">
+            <h4>Mangá “Lost in Time”</h4>
+            <img src="img/blog/details/news-lost_in_time.jpg" alt="">
+            <p>"Lost in Time" é um mangá que envolve os leitores em uma emocionante jornada através do tempo e ganhou bastante popularidade nessa temporada.
+                A história segue os passos de um protagonista que, após um misterioso evento, se encontra perdido em diferentes eras históricas.
+                Enquanto tenta descobrir uma maneira de retornar ao seu tempo original, ele enfrenta desafios únicos em cada período e faz aliados inesperados.
+                Com uma mistura de aventura, mistério e elementos históricos, "Lost in Time" oferece uma narrativa cativante e cheia de surpresas.</p>
+        </div>
+        <div class="blog__news__item__text">
+            <h4>Adaptação de “The Promised Neverland”</h4>
+            <img src="img/blog/details/news-promised.jpg" alt="">
+            <p>A segunda temporada do anime "The Promised Neverland" continua a saga emocionante de Emma, Norman e Ray em sua luta pela liberdade contra o cruel destino que os aguarda.
+                Nesta temporada, os protagonistas enfrentam novos desafios enquanto exploram o mundo fora do orfanato, descobrindo segredos sombrios e lutando para sobreviver.
+                Com reviravoltas emocionantes e desenvolvimento de personagens profundo, a segunda temporada de "The Promised Neverland" promete intensos momentos com os espectadores.</p>
+        </div>
+    </div>
+</div>
+
 <footer class="footer">
     <div class="page-up">
         <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
@@ -785,16 +882,14 @@
                         <li><a href="./mangas.html">Mangás</a></li>
                         <li><a href="./noticias.html">Notícias</a></li>
                         <li><a href="./galeria.html">Galeria</a></li>
-                        <li><a href="#">Guilda</a></li>
+                        <li><a href="guilda.html">Guilda</a></li>
                     </ul>
                 </div>
             </div>
           </div>
       </div>
   </footer>
-  <!-- Footer Section End -->
 
-  <!-- Search model Begin -->
   <div class="search-model">
     <div class="h-00 d-flex align-items-center justify-content-center">
         <div class="search-close-switch"><i class="icon_close"></i></div>
@@ -803,9 +898,7 @@
         </form>
     </div>
 </div>
-<!-- Search model end -->
 
-<!-- Js Plugins -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/player.js"></script>

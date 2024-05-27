@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notícias</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kosugi&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="css/style_carrossel.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+          background-image: url('./img/Estilização/Imagens/cartoon-anime-background-picture-image_1338575-transformed.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <video width="auto" height="60" autoplay muted>
+                            <source src="./videos/Logo-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Principal</a></li>
+                                <li><a href="./animes.html">Categorias<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./animes.html">Animes</a></li>
+                                        <li><a href="./mangas.html">Mangás</a></li>
+                                        <li><a href="./noticias.html">Notícias</a></li>
+                                        <li><a href="./galeria.html">Galeria</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="guilda.html">Guilda</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        <a href="./login.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+
+    <div class="floating-button" onclick="togglePopup()">
+        <img src="img/Estilização/Imagens/anny_icone.png" alt="Icon" class="button-icon">
+    </div>
+    
+    <div class="popup-form" id="popupForm">
+        <h2>
+            <p><strong>いらっしゃいませ! (Irasshaimase!)</strong></p>
+            <p>Eu sou a Anny, a assistente virtual do site.</p>
+            <p>Para críticas, dúvidas, sugestões ou apenas conversar sobre animes... Escreve aí! ✌️😘</p>
+        </h2>
+        <div class="popup-content">
+            <img src="img/Estilização/Imagens/annycomp.jpg" alt="Contact Image" class="popup-image">
+            <div class="form-fields">
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__title">
+                        <h6>Maio 24, 2024</h6>
+                        <h2> 💮 Temporada de Primavera 💮</h2>
+                        <div class="blog__details__social">
+                            <a href="#" class="facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
+                            <a href="#" class="pinterest"><i class="fa fa-pinterest"></i> Pinterest</a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin-square"></i> Linkedin</a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter-square"></i> Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="blog__details__pic">
+                        <img src="img/blog/details/spring-season.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__text">
+                            <p><strong> Temporada de Primavera dos animes e mangás japoneses promete surpreender! </strong></p>
+                            <p>A temporada de primavera dos animes e mangás já começou no Japão, trazendo uma avalanche de novas histórias e continuações muito aguardadas!
+                                Prepare-se para aventuras emocionantes, comédias hilariantes e dramas cativantes que irão conquistar o coração dos fãs de anime em todo o mundo.
+                                <br>Entre os destaques, temos a tão esperada nova temporada de "Boku no Hero Academia", que promete continuar a saga heroica de Deku e seus amigos da U.A. High School.
+                                Além disso, "Tensei Shitara Slime Datta Ken" retorna com mais aventuras do slime favorito de todos, Rimuru Tempest, em um mundo de fantasia cheio de ação e magia.
+                                <br>Para os fãs de comédia, "Kono Subarashii Sekai ni Shukufuku wo" está de volta com mais trapalhadas e confusões de Kazuma e sua equipe excêntrica.
+                                Este é um must-watch para quem adora rir sem parar!
+                                <br>Não perca também as estreias de novos animes que já estão gerando burburinho, como "Oshi no Ko", uma história intrigante que mistura drama e mistério no mundo do entretenimento,
+                                e "Yuusha, Yamemasu", uma comédia romântica que promete derreter corações com seu charme.
+                                <br> Prepare sua lista de animes, faça a pipoca e fique de olho nas plataformas de streaming, porque a temporada de primavera está recheada de emoções e surpresas!
+                                Não deixe de acompanhar todas as novidades e comentar com seus amigos sobre os episódios mais épicos. Vamos celebrar juntos essa festa de criatividade e imaginação que só os animes podem proporcionar!</p>
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h4>Boku no Hero 7ª Temporada</h4>
+                            <img src="img/blog/details/boku-no-hero.jpg" alt="">
+                            <p>Essa série de anime baseada no mangá de Kohei Horikoshi conquistou fãs em todo o mundo com sua emocionante história de super-heróis e poderes extraordinários. Vamos mergulhar nos detalhes:</p>
+
+                                <p>1. <strong>Início da Temporada 7</strong>:
+                                <br>- A 7ª temporada estreou em <strong>4 de maio de 2024</strong> e começou com quatro episódios recapitulando os eventos das temporadas anteriores.
+                                <br>- A primeira adaptação propriamente dita do que está por vir ocorreu em maio.</p>
+                                
+                                <p>2. <strong>Arco de Star and Stripe</strong>:
+                                <br>- O primeiro destaque é a estreia de <strong>Star and Stripe</strong>, a heroína número um dos Estados Unidos. Ela apareceu no final da sexta temporada.
+                                <br>- Star and Stripe estará em rota de colisão direta com <strong>Shigaraki</strong>, e o "Arco de Star and Stripe" promete moldar o restante da temporada.</p>
+                                
+                                <p>3. <strong>Arco do Traidor da U.A.</strong>:
+                                <br>- Após o confronto entre Star and Stripe e Shigaraki, a trama segue para o "Arco do Traidor da U.A.".
+                                <br>- Nesse arco, a identidade do enigmático traidor dentro da <strong>Academia U.A.</strong> será revelada.</p>
+                                
+                                <p>4. <strong>Arco da Guerra Final</strong>:
+                                <br>- O verdadeiro <strong>Arco da Guerra Final</strong> vem em seguida.
+                                <br>- Este arco já soma <strong>75 capítulos</strong> no mangá e continua crescendo a cada semana.
+                                <br>- A temporada pode encerrar antes do clímax dos combates contra <strong>All For One</strong> e <strong>Shigaraki</strong>.</p>
+                                
+                                <p>5. <strong>Expectativas e Incertezas</strong>:
+                                <br>- Com os capítulos mais recentes do mangá ainda navegando pelos combates finais, é complicado prever exatamente onde a temporada terminará.
+                                <br>- Uma coisa é certa: vai deixar os fãs na expectativa por mais!</p>
+                                
+                                <p>Em resumo, a 7ª temporada de Boku no Hero Academia promete muita ação, revelações e emoções à medida que os heróis enfrentam seus maiores desafios até agora. Mal podemos esperar para ver como tudo se desenrola! 🌟🔥</p>
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h4>Tensei Shitara Slime Datta Ken 3ª Temporada</h4>
+                            <img src="img/blog/details/Tensei-Shitara-Slime-Datta-Ken-ganha-3a-temporada-com-trailer-visual-e-data-de-estreia-jpg.webp" alt="">
+                            <p>Essa série de anime, também conhecida como "That Time I Got Reincarnated as a Slime", conquistou fãs com sua trama envolvente e personagens cativantes.
+                            <br>A terceira temporada começou na <strong>primavera japonesa de 2024</strong>, entre março e junho. A história continua a seguir <strong>Rimuru Tempest</strong>,
+                            que agora é um slime poderoso, Lord Demônio e líder da nação de <strong>Jura-Tempest</strong>. Esperamos ver mais exploração do mundo, novos desafios e revelações sobre o passado de Rimuru.
+                            Além de Rimuru, personagens como <strong>Shion</strong>, <strong>Benimaru</strong>, <strong>Milim</strong>, <strong>Veldora</strong> e <strong>Shizu</strong> também desempenharão papéis importantes.
+                            Antagonistas misteriosos e ameaças surgirão, testando a força e a determinação de Rimuru e seus aliados.
+                            <br>A animação de "Tensei Shitara Slime Datta Ken" sempre foi de alta qualidade, e esperamos que a terceira temporada mantenha esse padrão. A trilha sonora também é um destaque, contribuindo para a atmosfera épica da série. Os fãs estão especulando sobre novos personagens, reviravoltas emocionantes e batalhas épicas. A terceira temporada promete expandir ainda mais o universo de "Slime" e nos surpreender.
+                            <br>A terceira temporada de "Tensei Shitara Slime Datta Ken" é foi aguardada com grande expectativa pelos fãs e promete continuar a saga emocionante de Rimuru e seus amigos.🌟🔵🔥.</p>
+                        </div>
+                        <div class="blog__details__item__text">
+                            <h4>Terceira Temporada de "Kono Subarashii Sekai ni Shukufuku wo!" - Uma Comédia que Não Perde o Ritmo</h4>
+                            <img src="img/blog/details/konosuba-season-3-anime-trailer.webp" alt="">
+                            <p>A terceira temporada de "KonoSuba" finalmente chegou, trazendo de volta Kazuma, Aqua, Megumin e Darkness em suas hilariantes aventuras.
+                            A série continua a ser uma paródia do gênero isekai, com seu humor irreverente e personagens memoráveis.</p>
+                            <br>
+                            <p><strong>Personagens em Destaque</strong>
+                            <br>- <strong>Kazuma Satou</strong>: Ainda preguiçoso e oportunista, Kazuma mostra um lado mais estratégico.
+                            <br>- <strong>Aqua</strong>: A deusa inútil continua a causar problemas, mas tem momentos de competência.
+                            <br>- <strong>Megumin</strong>: Sua obsessão por explosões permanece forte, mas vemos um desenvolvimento em suas habilidades e relacionamento com Kazuma.
+                            <br>- <strong>Darkness</strong>: Enfrenta novos desafios, mostrando sua coragem e resistência.</p>
+                            <p><strong>Humor e Novos Desafios</strong>
+                            <br>A temporada mantém o humor afiado e as situações absurdas. Novos personagens adicionam complexidade e diversão, mantendo a série fresca e envolvente.</p>
+                            <p><strong>Expectativas para o Futuro</strong>
+                            <br>O final da temporada deixa pistas para novas aventuras, prometendo mais ação e risadas na próxima temporada.</p>
+                            <p><strong>Conclusão</strong>
+                            <br>A terceira temporada de "KonoSuba" entrega humor irreverente, personagens memoráveis e aventuras insanas.
+                            A série continua a ser uma pausa refrescante do típico herói isekai, com mais risadas e trapalhadas à vista. Se você ainda não conferiu, agora é a hora de mergulhar no mundo caótico de KonoSuba!</p>
+                        </div>
+                        <div class="blog__details__btns">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="blog__details__btns__item">
+                                        <h5><a href="#"><span class="arrow_left"></span> Yuusha, Yamemasu </a>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="blog__details__btns__item next__btn">
+                                        <h5><a href="#"> Mayonaka Heart Tune <span
+                                            class="arrow_right"></span></a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__details__comment">
+                                <h4>3 Comentários</h4>
+                                <div class="blog__details__comment__item">
+                                    <div class="blog__details__comment__item__pic">
+                                        <img src="img/blog/details/comment-1.png" alt="">
+                                    </div>
+                                    <div class="blog__details__comment__item__text">
+                                        <span>Abril 22, 2024</span>
+                                        <h5>Enzo Uzumaki</h5>
+                                        <p>Acabei de ver o novo episódio de Boruto e foi incrível! 😍
+                                            A luta do Boruto e Kawaki contra o vilão foi épica, e o novo jutsu do Boruto foi demais!
+                                            🔥 Mal posso esperar pelo próximo episódio! 💥</p>
+                                        <a href="#">Curtir 👍</a>
+                                        <a href="#">Compartilhar➡️</a>
+                                    </div>
+                                </div>
+                                <div class="blog__details__comment__item blog__details__comment__item--reply">
+                                    <div class="blog__details__comment__item__pic">
+                                        <img src="img/blog/details/comment-2.png" alt="">
+                                    </div>
+                                    <div class="blog__details__comment__item__text">
+                                        <span>Abril 27, 2024</span>
+                                        <h5>Mina Nara</h5>
+                                        <p>Nossa, Enzo! Eu também achei demais! 😃
+                                            A química entre Boruto e Kawaki está ficando incrível.
+                                            E aquele novo jutsu? Sério, estou tão animada para ver o que vem a seguir! 💖</p>
+                                            <a href="#">Curtir 👍</a>
+                                            <a href="#">Compartilhar➡️</a>
+                                    </div>
+                                </div>
+                                <div class="blog__details__comment__item">
+                                    <div class="blog__details__comment__item__pic">
+                                        <img src="img/blog/details/comment-3.png" alt="">
+                                    </div>
+                                    <div class="blog__details__comment__item__text">
+                                        <span>Maio 15, 2024</span>
+                                        <h5>Lucas Liones</h5>
+                                        <p>Galera, acabei de ver o filme de Nanatsu no Taisai e estou completamente impressionado!
+                                            As lutas foram incríveis, o Meliodas e o Ban deram um show à parte.
+                                            A história da Elizabeth também foi bem bacana. Recomendo demais!                        
+                                            #NanatsuNoTaisai</p>
+                                        <a href="#">Curtir 👍</a>
+                                        <a href="#">Compartilhar ➡️</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__details__form">
+                                <h4>Deixe um Comentário 🖊</h4>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <input type="text" placeholder="Nickname">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <input type="text" placeholder="Email">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <textarea placeholder="Mensagem"></textarea>
+                                            <button type="submit" class="site-btn">Enviar Mensagem</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="page-up">
+                <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="footer__logo">
+                            <a href="./index.html"><img src="img/Estilização/Imagens/anihon_go!_logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer__nav">
+                            <ul>
+                                <li class="active"><a href="./index.html">Principal</a></li>
+                                <li><a href="./animes.html">Animes</a></li>
+                                <li><a href="./mangas.html">Mangás</a></li>
+                                <li><a href="./noticias.html">Notícias</a></li>
+                                <li><a href="./galeria.html">Galeria</a></li>
+                                <li><a href="guilda.html">Guilda</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </footer>
+        
+          <div class="search-model">
+            <div class="h-00 d-flex align-items-center justify-content-center">
+                <div class="search-close-switch"><i class="icon_close"></i></div>
+                <form class="search-model-form">
+                    <input type="text" id="search-input" placeholder="Procure Aqui .....">
+                </form>
+            </div>
+        </div>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/player.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/scripts_form.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script>
+            function togglePopup() {
+                var popup = document.getElementById('popupForm');
+                if (popup.style.display === 'block') {
+                    popup.style.display = 'none';
+                } else {
+                    popup.style.display = 'block';
+                }
+            }
+        </script>
+        
+        </body>
+        
+        </html>

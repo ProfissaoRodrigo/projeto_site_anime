@@ -1776,6 +1776,69 @@ ol {
   Guilda
 -----------------------*/
 
+.guilda_details_text h1 {
+    font-family: cursive;
+    color: #c3ff00;
+    text-align: center;
+    text-shadow: -1px -1px 0 #ff0000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+
+.guilda_details_text h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: none;
+    color: #b1aefc;
+    text-align: center;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+
+.guilda_details_item_text h4 {
+    color: #acc3ce;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.guilda_details_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.guilda_details_item_img .img-anny {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.guilda_details_item_img .img-batista {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+
+.guilda_details_item_info p {
+    color: #fcfcfc;
+    font-size: 17px;
+    line-height: 30px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+.guilda_details_item_text {
+    display: flex;
+    flex-direction: column;
+}
 
 
 /*---------------------

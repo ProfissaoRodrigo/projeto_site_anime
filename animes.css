@@ -1,0 +1,258 @@
+:root {
+    --color-primary: #F5CF49;
+    --color-purple: #A958A5;
+    --color-white: #ffffff;
+    --color-black: #111111;
+    --color-black-light: #242424;
+    --color-semi-grey: #9F9F9F;
+    --color-grey: #A4A4A4;
+    --color-medium-grey: #b4b4b4;
+    --color-dark-grey: #616161;
+    --color-darker-grey: #808080;
+    --color-grey-normal: #868686;
+    --color-grey-light: #d4d4d4;
+    --font-primary: "Noir Pro";
+    --font-sec: "Poppins", sans-serif;
+    --font-Noir-Pro-Bold: "Noir Pro Bold";
+    --font-Noir-Pro-semiBold: "Noir Pro Semi Bold";
+    --font-Noir-Pro-Light: "Noir Pro Light";
+    --transition: all 0.3s ease-in-out;
+    --font-body-1: 18px;
+    --font-body-2: 16px;
+    --font-body-3: 14px;
+    --font-body-4: 12px;
+    --line-height-b1: 1.5;
+    --line-height-b3: 1.1;
+    --h1: 80px;
+    --h2: 64px;
+    --h3: 48px;
+    --h4: 32px;
+    --h5: 24px;
+    --h6: 20px;
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13,110,253;
+    --bs-secondary-rgb: 108,117,125;
+    --bs-success-rgb: 25,135,84;
+    --bs-info-rgb: 13,202,240;
+    --bs-warning-rgb: 255,193,7;
+    --bs-danger-rgb: 220,53,69;
+    --bs-light-rgb: 248,249,250;
+    --bs-dark-rgb: 33,37,41;
+    --bs-white-rgb: 255,255,255;
+    --bs-black-rgb: 0,0,0;
+    --bs-body-color-rgb: 33,37,41;
+    --bs-body-bg-rgb: 255,255,255;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-body-2);
+    line-height: var(--line-height-b1);
+    color: var(--color-dark);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    height: 100%;
+    background-color: var(--color-black-light);
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+img {
+  height: auto;
+  vertical-align: middle;
+}
+
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+a.text-box {
+  display: inline-block;
+  padding: 0px 10px;
+  border: 2px solid var(--color-medium-grey);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  margin-right: 10px;
+  color: var(--color-medium-grey);
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+a.white {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+a.text-box.active {
+  color: var(--color-black);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+a.text-box:hover{
+  color: var(--color-black);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+p.text-box {
+  display: inline-block;
+  padding: 0px 10px;
+  border: 2px solid var(--color-medium-grey);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  margin-right: 10px;
+  color: var(--color-medium-grey);
+  margin-bottom: 20px;
+}
+p.white {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+
+p.text-box.active {
+  color: var(--color-black);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+p.text-box:hover{
+  color: var(--color-black) !important;
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.anime-btn {
+  border-radius: 10px;
+  font-weight: 500;
+  height: auto;
+  text-align: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+  border-right: none;
+  background: var(--color-black-light);
+}
+
+.title, .light-text{
+  color: white;
+  font-weight: bolder;
+  font-size: x-large;
+  line-height: var(--line-height-b3);
+  margin: 0 0 10px 0;
+}
+
+.banner.style-3 p.text {
+  margin-bottom: 0;
+  display: inline;
+  font-weight: 400;
+  color: var(--color-medium-grey);
+  padding-right: 20px;
+}
+
+.banner.style-3 p.text {
+  font-size: 25px;
+}
+
+.inner-text-div {
+  flex: 1 1 45;
+  height: 240px;
+  width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: medium;
+}
+
+.inner-img-div {
+  flex: 1 1 45%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 15px;
+}
+
+.text-row .text {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.title {
+  font-size: 2em;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.text-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}

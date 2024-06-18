@@ -110,6 +110,46 @@
     });
 
     /*------------------
+    Characters
+    --------------------*/
+
+    const characters = document.querySelectorAll('.character');
+
+    characters.forEach((character) => {
+        character.addEventListener('click', () => {
+            removeSelectedCard();
+            character.classList.add('selected');
+            changeMainImage(character);
+            changeMainCharacterName(character);
+            changeDescription(character);
+        });
+    });
+
+    function removeSelectedCard() {
+        characters.forEach((character) => {
+            character.classList.remove('selected');
+        });
+    }
+    
+    function changeMainImage(character) {
+        const mainImage = document.querySelector('.selected-character .main');
+        const characterImage = character.querySelector('img');
+        mainImage.src = characterImage.src;
+        mainImage.alt = characterImage.alt;
+    }
+    
+    function changeMainCharacterName(character) {
+        const characterName = document.getElementById('character-name');
+        characterName.textContent = character.dataset.name;
+    }
+    
+    function changeDescription(character) {
+        const description = document.getElementById('description');
+        description.textContent = character.dataset.description;
+    }
+
+
+    /*------------------
         Video Player
     --------------------*/
     const player = new Plyr('#player', {
@@ -129,5 +169,74 @@
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
      });
+
+      /*------------------
+        Validations
+    --------------------*/
+    document.getElementById('emailInput').addEventListener('input', function() {
+        const emailInput = this;
+        const checkIcon = document.getElementById('emailCheckIcon');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailInput.value.trim() !== '' && emailPattern.test(emailInput.value)) {
+            checkIcon.style.display = 'block';
+        } else {
+            checkIcon.style.display = 'none';
+        }
+    });  
+
+    document.getElementById('passwordInput').addEventListener('input', function() {
+        const passwordInput = this;
+        const checkIcon = document.getElementById('passwordCheckIcon');
+
+        const isValidPassword = passwordInput.value.trim().length >= 8;
+
+        if (isValidPassword) {
+            checkIcon.style.display = 'block';
+        } else {
+            checkIcon.style.display = 'none';
+        }
+    });
+
+    document.querySelectorAll('.toggle-password').forEach(icon => {
+        icon.addEventListener('click', function () {
+            const input = document.querySelector('#passwordInput');
+            const iconImg = this.querySelector('img');
+    
+            this.classList.toggle('active');
+    
+            if (input.type === 'password') {
+                input.type = 'text';
+                iconImg.src = '/img/Estilização/Imagens/sharingan-eye.png';
+            } else {
+                input.type = 'password';
+                iconImg.src = '/img/Estilização/Imagens/eye-satoru-gojo.png';
+            }
+        });
+    });
+    
+          /*------------------
+        Social Conection
+    --------------------*/
+
+    $(document).ready(function(){
+        $('.facebook').click(function(e){
+            e.preventDefault();
+            window.open('https://www.facebook.com', 'newwindow', 'width=600, height=400');
+        });
+        $('.google').click(function(e){
+            e.preventDefault();
+            window.open('https://www.google.com', 'newwindow', 'width=600, height=400');
+        });
+        $('.twitter').click(function(e){
+            e.preventDefault();
+            window.open('https://www.twitter.com', 'newwindow', 'width=600, height=400');
+        });
+    });
+
+
+
+
+
 
 })(jQuery);

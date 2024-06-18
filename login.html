@@ -130,13 +130,22 @@
                         <h3>Login</h3>
                         <form action="#">
                             <div class="input__item">
-                                <input type="email" placeholder="Email" required>
-                                <span class="icon_mail"></span>
+                                <div class="input-container">
+                                    <input type="email" id="emailInput" placeholder="Email" required>
+                                    <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="emailCheckIcon">
+                                    <span class="icon_mail"></span>
+                                </div>
                             </div>
                             <div class="input__item">
-                                <input type="password" placeholder="Password" required>
-                                <span class="icon_lock"></span>
-                            </div>
+                                <div class="input-container">
+                                    <input type="password" id="passwordInput" placeholder="Password" required>
+                                    <span class="icon_lock"></span>
+                                    <span class="eye-icon toggle-password">
+                                        <img src="/img/Estilização/Imagens/eye-satoru-gojo.png" alt="Mostrar/Ocultar Senha">
+                                    </span>
+                                    <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="passwordCheckIcon">
+                                </div>                                
+                            </div>                              
                             <button type="submit" class="site-btn">Login</button>
                         </form>
                         <a href="#" class="forget_pass">Esqueceu sua senha? 🤔</a>
@@ -157,8 +166,7 @@
                             <ul>
                                 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i> Login com o Facebook</a></li>
                                 <li><a href="#" class="google"><i class="fa fa-google"></i> Login com o Google</a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i> Login com o Twitter</a>
-                                </li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i> Login com o Twitter</a></li>
                             </ul>
                         </div>
                     </div>
@@ -203,6 +211,7 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/player.js"></script>

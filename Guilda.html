@@ -1,0 +1,248 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guilda</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kosugi&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="css/style_carrossel.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+          background-image: url('./img/Estilização/Imagens/Japanese_Autumn_Leaves.gif');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <video width="auto" height="60" autoplay muted>
+                            <source src="./videos/Logo-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Principal</a></li>
+                                <li><a href="./animes.html">Categorias<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./animes.html">Animes</a></li>
+                                        <li><a href="./mangas.html">Mangás</a></li>
+                                        <li><a href="./noticias.html">Notícias</a></li>
+                                        <li><a href="./galeria.html">Galeria</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="guilda.html">Guilda</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        <a href="./login.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+
+    <div class="floating-button" onclick="togglePopup()">
+        <img src="img/Estilização/Imagens/anny_icone.png" alt="Icon" class="button-icon">
+    </div>
+    <div class="popup-form" id="popupForm">
+        <h2>
+            <p><strong>いらっしゃいませ! (Irasshaimase!)</strong></p>
+            <p>Eu sou a Anny, a assistente virtual do site.</p>
+            <p>Para críticas, dúvidas, sugestões ou apenas conversar sobre animes... Escreve aí! ✌️😘</p>
+        </h2>
+        <div class="popup-content">
+            <img src="img/Estilização/Imagens/annycomp.jpg" alt="Contact Image" class="popup-image">
+            <div class="form-fields">
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <body>
+        
+        <section class="guilda-breadcrumb set-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="guilda__breadcrumb__text">
+                            <h2>BEM-VINDO À GUILDA ANIHON GO!</h2>
+                            <p><strong> Aqui você conhecerá os aventureiros do nosso site! </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="players">
+            <section class="characters">
+                <h1>Escolha seu Aventureiro</h1>
+        
+                <ul class="character-list">
+                    <li class="character selected" id="anny" data-name="Anny Hongo" data-description='Anny Hongo é uma assistente virtual sábia e serena,
+                    com grande conexão com a magia sagrada moderna. Programada com base nos ensinamentos de um antigo templo, Anny desenvolveu habilidades excepcionais em magia sagrada e um profundo desejo de ajudar.
+                    Empática e compreensiva apesar de tímida, está sempre pronta para oferecer apoio. Sua voz suave e gentil traz conforto, enquanto seu vasto conhecimento proporciona soluções práticas.
+                    Anny frequentemente diz: "O conhecimento é a chave para a sabedoria" e "Estamos todos conectados, através da luz e da sombra.".
+                    Sua sabedoria e bondade combinam para ajudar os usuários a encontrarem paz e soluções para seus problemas, tornando-a uma guia virtual confiável e amável.'>
+                        <img src="/img/guilda/anny_hongo.jpg" alt="Player Anny">
+                    </li>
+        
+                    <li class="character" id="rodrigo" data-name="Rodrigo Batista" data-description="Archmage Rodrigo Batista é um programador lendário,
+                    conhecido por suas habilidades excepcionais em diversas linguagens de programação, arquitetura de software,
+                    inteligência artificial, segurança cibernética e desenvolvimento de compiladores. Com uma presença marcante e cabelos quase grisalhos, Rodrigo é respeitado e reverenciado na comunidade de desenvolvimento de software.
+                    Ele fundou e mantém vários projetos open source, publicou inúmeros artigos científicos, possui várias patentes em tecnologias inovadoras, e é um palestrante e mentor frequente em conferências de tecnologia.
+                    Empático e disposto a ajudar, orienta jovens programadores e participa de hackathons e workshops.
+                    Ele acredita que a magia da programação está em transformar ideias em realidade e visa usar a tecnologia para resolver problemas ambientais e promover práticas sustentáveis.">
+                        <img src="/img/guilda/rodrigo_batista.jpg" alt="Player Rodrigo">
+                    </li>
+        
+                    <li class="character" id="eniripsa" data-name="Player Eniripsa" data-description="Eniripsa is the player of healing, who can heal with a single word. Her disciples use the power of speech to relieve the suffering of their allies or harm their enemies.">
+                        <img src="./src/images/card-eniripsa.png" alt="Player Eniripsa">
+                    </li>
+        
+                    <li class="character" id="sadida" data-name="Player Sadida" data-description="Sadida is the player of nature. A very relaxed player, his disciples love to run barefoot in the grass, plant seeds... and turn them into terrifying dolls that fight by their side!">
+                        <img src="./src/images/card-sadida.png" alt="Player Sadida">
+                    </li>
+        
+                    <li class="character" id="feca" data-name="Player Feca" data-description="Feca is the protective player with shields and an iron will. No one can get past her unshakable defense!">
+                        <img src="./src/images/card-feca.png" alt="Player Feca">
+                    </li>
+        
+                    <li class="character" id="sram" data-name="Player Sram" data-description="Patron deity of the Srams and Rogues, this player doesn't think twice about using and abusing some of the worst strategies to increase his number of followers. He even went so far as to impersonate another player!">
+                        <img src="./src/images/card-sram.png" alt="Player Sram">
+                    </li>
+        
+                    <li class="character" id="sacrier" data-name="Player Sacrier" data-description="The player of pain and sacrifice, Sacrier is a true scourge for her enemies. Her disciples draw their power from their wounds: the more damage they take, the stronger they become.">
+                        <img src="./src/images/card-sacrier.png" alt="Player Sacrier">
+                    </li>
+        
+                    <li class="character" id="enutrof" data-name="Player Enutrof" data-description="Enutrof, the Great Miser, loves to hoard precious things and, in the hunt for hidden treasure, his disciples know how to handle a shovel and pickaxe like no one else...">
+                        <img src="./src/images/card-enutrof.png" alt="Player Enutrof">
+                    </li>
+                </ul>
+            </section>
+        
+            <section class="selected-character">
+                <img src="/img/guilda/anny_hongo_mob.png" alt="Aventureiro Selecionado" class="main">
+            
+                <div class="information">
+                    <h2 class="character-name" id="character-name">Anny Hongo</h2>
+            
+                    <p class="description" id="description">Anny Hongo é uma assistente virtual sábia e serena,
+                        com grande conexão com a magia sagrada moderna. Programada com base nos ensinamentos de um antigo templo, Anny desenvolveu habilidades excepcionais em magia sagrada e um profundo desejo de ajudar.
+                        Empática e compreensiva apesar de tímida, está sempre pronta para oferecer apoio. Sua voz suave e gentil traz conforto, enquanto seu vasto conhecimento proporciona soluções práticas.
+                        Anny frequentemente diz: "O conhecimento é a chave para a sabedoria" e "Estamos todos conectados, através da luz e da sombra.".
+                        Sua sabedoria e bondade combinam para ajudar os usuários a encontrarem paz e soluções para seus problemas, tornando-a uma guia virtual confiável e amável.</p>
+                </div>
+            </section>
+            
+        </main>               
+
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/Estilização/Imagens/anihon_go!_logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Principal</a></li>
+                            <li><a href="./animes.html">Animes</a></li>
+                            <li><a href="./mangas.html">Mangás</a></li>
+                            <li><a href="./noticias.html">Notícias</a></li>
+                            <li><a href="./galeria.html">Galeria</a></li>
+                            <li><a href="guilda.html">Guilda</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </footer>
+    
+      <div class="search-model">
+        <div class="h-00 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure Aqui .....">
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scripts_form.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById('popupForm');
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
+        }
+    </script>
+    
+</body>
+    
+</html>

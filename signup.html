@@ -81,6 +81,34 @@
         </div>
     </header>
 
+    <div class="floating-button" onclick="togglePopup()">
+        <img src="img/Estilização/Imagens/anny_icone.png" alt="Icon" class="button-icon">
+    </div>
+    
+    <div class="popup-form" id="popupForm">
+        <h2>
+            <p><strong>いらっしゃいませ! (Irasshaimase!)</strong></p>
+            <p>Eu sou a Anny, a assistente virtual do site.</p>
+            <p>Para críticas, dúvidas, sugestões ou apenas conversar sobre animes... Escreve aí! ✌️😘</p>
+        </h2>
+        <div class="popup-content">
+            <img src="img/Estilização/Imagens/annycomp.jpg" alt="Contact Image" class="popup-image">
+            <div class="form-fields">
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <section class="normal-breadcrumb set-bg">
         <div class="container">
             <div class="row">
@@ -102,19 +130,31 @@
                         <h3>Cadastro</h3>
                         <form action="#">
                             <div class="input__item">
-                                <input type="email" placeholder="Email" required>
-                                <span class="icon_mail"></span>
+                                <div class="input-container">
+                                    <input type="email" id="emailInput" placeholder="Email" required>
+                                    <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="emailCheckIcon">
+                                    <span class="icon_mail"></span>
+                                </div>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Nickname" required>
-                                <span class="icon_profile"></span>
+                                <div class="input-container">
+                                    <input type="text" id="nicknameInput" placeholder="Nickname" required>
+                                    <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="checkIcon">
+                                    <span class="icon_profile"></span>
+                                </div>
                             </div>
                             <div class="input__item">
-                                <input type="password" placeholder="Senha" required>
-                                <span class="icon_lock"></span>
-                            </div>
-                            <button type="submit" class="site-btn">Cadastre-se</button>
-                        </form>
+                                <div class="input-container">
+                                    <input type="password" id="passwordInput" placeholder="Password" required>
+                                    <span class="icon_lock"></span>
+                                    <span class="eye-icon toggle-password">
+                                        <img src="/img/Estilização/Imagens/eye-satoru-gojo.png" alt="Mostrar/Ocultar Senha">
+                                    </span>
+                                    <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="passwordCheckIcon">
+                                </div>                                
+                            </div>                              
+                            <button type="submit" class="site-btn">Login</button>
+                          </form>
                         <h5>Já possui uma conta? 😍 <a href="login.html">Acesse já!</a></h5>
                     </div>
                 </div>
@@ -122,10 +162,9 @@
                     <div class="login__social__links">
                         <h3>Cadastre com:</h3>
                         <ul>
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i> Cadastre com Facebook</a>
-                            </li>
-                            <li><a href="#" class="google"><i class="fa fa-google"></i> Cadastre com Google</a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i> Cadastre com Twitter</a></li>
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i> Login com o Facebook</a></li>
+                            <li><a href="#" class="google"><i class="fa fa-google"></i> Login com o Google</a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i> Login com o Twitter</a></li>
                         </ul>
                     </div>
                 </div>
@@ -169,6 +208,7 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/player.js"></script>

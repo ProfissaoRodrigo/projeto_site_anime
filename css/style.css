@@ -1191,6 +1191,202 @@ ol {
 }
 
 /*---------------------
+    Guilda Breadcrumb
+-----------------------*/
+
+.guilda-breadcrumb {
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'Shinrinyoku';
+    src: url('/fonts/Shinrinyoku.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.guilda__breadcrumb__text h2 {
+    color: #ffffff;
+	text-shadow: 
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+    font-size: 58px;
+    font-family: 'Shinrinyoku', sans-serif;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.guilda__breadcrumb__text p {
+    color: #ffffff;
+	text-shadow: 
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+/*---------------------
+    Players
+-----------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.players {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    min-height: calc(100vh - 152px);
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.players .characters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 300px;
+    margin-top: 30px;
+}
+
+.players .characters h1 {
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: yellow;
+	text-shadow: rgb(255, 255, 255) 0px 0px 5px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #5DC3DB;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.players .character-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.players .character {
+	border: gold 2px solid;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.character-list .character img {
+    height: 200px;
+    width: 200px;
+	border-radius: 10px;
+}
+
+.character-list .character.selected {
+    box-shadow: 0px 0px 24px 5px;
+}
+
+.character-list .character.selected#anny {
+	color: #ff0090;
+}
+.character-list .character.selected#rodrigo {
+    color: #1500ff;
+}
+
+.character-list .character.selected#eniripsa {
+    color: green;
+}
+
+.character-list .character.selected#sadida {
+    color: red;
+}
+
+.character-list .character.selected#feca {
+    color: #F9E65B;
+}
+
+.character-list .character.selected#sram {
+    color: #C693C2;
+}
+
+.character-list .character.selected#sacrier {
+    color: #E9907B;
+}
+
+.character-list .character.selected#enutrof {
+    color: #895EA4;
+}
+
+.players .selected-character {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    max-width: 530px;
+}
+
+.selected-character .main {
+    width: 60%;
+    height: auto;
+	align-items: center;
+    margin-top: 200px;
+    margin-left: auto;
+	margin-right: auto;
+    border-radius: 10px;
+	border: white 2px solid;
+	box-shadow: -5px -5px 24px 5px;
+}
+
+
+.information .character-name {
+	font-family: 'Shinrinyoku', sans-serif;
+	text-shadow: gold 0px 0px 5px;
+	letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #5DC3DB;
+    width: 100%;
+    text-align: center;
+}
+
+.information .description {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+	font-weight: bolder;
+	color: black;
+    margin-top: 20px;
+    width: 100%;
+	background: #ffffff71;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+/*---------------------
     Blog
 -----------------------*/
 
@@ -1633,6 +1829,69 @@ ol {
 .login__form form .input__item input::placeholder {
 	color: #b7b7b7;
 }
+
+.input-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.input-container input {
+	width: 100%;
+	height: 50px;
+	padding-right: 40px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.input-container img.input-icon {
+	height: 50px;
+	width: 50px;
+	margin-left: 10px;
+	display: none;
+}
+
+.input-container {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+	margin-top: 10px;
+	margin-left: 25px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.eye-icon img {
+    width: 40px;
+    height: auto;
+}
+
+.icon_lock {
+    position: absolute;
+    right: 35px;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+#passwordInput {
+    padding-right: 40px;
+}
+
 
 .login__form form .input__item span {
 	color: #b7b7b7;

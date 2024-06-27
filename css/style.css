@@ -1317,30 +1317,6 @@ ul {
     color: #1500ff;
 }
 
-.character-list .character.selected#eniripsa {
-    color: green;
-}
-
-.character-list .character.selected#sadida {
-    color: red;
-}
-
-.character-list .character.selected#feca {
-    color: #F9E65B;
-}
-
-.character-list .character.selected#sram {
-    color: #C693C2;
-}
-
-.character-list .character.selected#sacrier {
-    color: #E9907B;
-}
-
-.character-list .character.selected#enutrof {
-    color: #895EA4;
-}
-
 .players .selected-character {
     display: flex;
     flex-direction: column;

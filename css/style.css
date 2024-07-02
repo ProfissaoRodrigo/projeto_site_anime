@@ -1363,15 +1363,15 @@ ul {
 }
 
 /*---------------------
-    Blog
+    Mangas
 -----------------------*/
 
-.blog {
+.manga {
 	padding-top: 70px;
 	padding-bottom: 90px;
 }
 
-.blog__item {
+.manga__item {
 	height: 580px;
 	position: relative;
 	margin-left: -10px;
@@ -1379,24 +1379,24 @@ ul {
 	margin-bottom: 10px;
 }
 
-.blog__item.small__item {
+.manga__item.small__item {
 	height: 285px;
 }
 
-.blog__item.small__item .blog__item__text {
+.manga__item.small__item .manga__item__text {
 	padding: 0 30px;
 }
 
-.blog__item.small__item .blog__item__text p {
+.manga__item.small__item .manga__item__text p {
 	margin-bottom: 5px;
 }
 
-.blog__item.small__item .blog__item__text h4 a {
+.manga__item.small__item .manga__item__text h4 a {
 	font-size: 20px;
 	line-height: 30px;
 }
 
-.blog__item__text {
+.manga__item__text {
 	position: absolute;
 	left: 0;
 	bottom: 25px;
@@ -1405,19 +1405,20 @@ ul {
 	padding: 0 105px;
 }
 
-.blog__item__text p {
+.manga__item__text p {
 	color: #ffffff;
 	margin-bottom: 12px;
 }
 
-.blog__item__text p span {
+.manga__item__text p span {
 	color: #e53637;
 	margin-right: 5px;
 }
 
-.blog__item__text h4 a {
-	color: #ffffff;
+.manga__item__text h4 a {
+	color: #000000;
 	line-height: 34px;
+	background-color: #00ddff;
 }
 
 /*---------------------

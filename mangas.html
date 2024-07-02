@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mangás</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="css/style_carrossel.css">
+    <link rel="stylesheet" href="css/styles_header.css">
+    <link rel="stylesheet" href="css/styles_main.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+          background-image: url('./img/Estilização/Imagens/manga-panel-background.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <video width="auto" height="60" autoplay muted>
+                            <source src="./videos/Logo-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Principal</a></li>
+                                <li><a href="./animes.html">Categorias<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./animes.html">Animes</a></li>
+                                        <li><a href="./mangas.html">Mangás</a></li>
+                                        <li><a href="./noticias.html">Notícias</a></li>
+                                        <li><a href="./galeria.html">Galeria</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./guilda.html">Guilda</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        <a href="./login.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+
+    <div class="floating-button" onclick="togglePopup()">
+        <img src="img/Estilização/Imagens/anny_icone.png" alt="Icon" class="button-icon">
+    </div>
+    
+    <div class="popup-form" id="popupForm">
+        <h2>
+            <p><strong>いらっしゃいませ! (Irasshaimase!)</strong></p>
+            <p>Eu sou a Anny, a assistente virtual do site.</p>
+            <p>Para críticas, dúvidas, sugestões ou apenas conversar sobre animes... Escreve aí! ✌️😘</p>
+        </h2>
+        <div class="popup-content">
+            <img src="img/Estilização/Imagens/annycomp.jpg" alt="Contact Image" class="popup-image">
+            <div class="form-fields">
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="normal-breadcrumb set-bg" data-setbg="img/Estilização/Imagens/gojo_satoru.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>MANGÁS</h2>
+                        <p><strong>Os melhores do Japão estão aqui!</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">PDF Viewer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="manga spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="manga__item set-bg" data-setbg="img/manga/manga-1.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 17 Maio 2024</p>
+                                    <h4><a href="docs/kimetsu_no_yaiba.pdf" onclick="window.open('docs/kimetsu_no_yaiba.pdf', 'popup', 'width=600,height=400'); return false;">Kimetsu no Yaiba 205</a></h4>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-4.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 01 Março 2020</p>
+                                    <h4><a href="#">Shingeki no Kyojin 139</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-5.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 10 Abril 2024</p>
+                                    <h4><a href="#">Boku no Hero Academia 396</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="manga__item set-bg" data-setbg="img/manga/manga-7.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 23 Junho 2022</p>
+                                    <h4><a href="#">Black Clover 365</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-10.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 15 Setembro 2023</p>
+                                    <h4><a href="#">Chainsaw Man 140</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-11.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 15 Dezembro 2023</p>
+                                    <h4><a href="#">Spy x Family 78</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-2.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 25 Janeiro 2022</p>
+                                    <h4><a href="#">Dragon Ball Super 145</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-3.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 12 Junho 2024</p>
+                                    <h4><a href="#">One Piece 1087</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="manga__item set-bg" data-setbg="img/manga/manga-6.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 08 Março 2023</p>
+                                    <h4><a href="#">Jujutsu Kaisen 232</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-8.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 19 Outubro 2023</p>
+                                    <h4><a href="#">Tokyo Revengers 278</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="manga__item small__item set-bg" data-setbg="img/manga/manga-9.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 16 Novembro 2023</p>
+                                    <h4><a href="#">Boruto: Naruto Next Generations 82</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="manga__item set-bg" data-setbg="img/manga/manga-12.jpg">
+                                <div class="manga__item__text">
+                                    <p><span class="icon_calendar"></span> 10 Maio 2024</p>
+                                    <h4><a href="#">One Punch Man 188</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/Estilização/Imagens/anihon_go!_logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Principal</a></li>
+                            <li><a href="./animes.html">Animes</a></li>
+                            <li><a href="./mangas.html">Mangás</a></li>
+                            <li><a href="./noticias.html">Notícias</a></li>
+                            <li><a href="./galeria.html">Galeria</a></li>
+                            <li><a href="guilda.html">Guilda</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </footer>
+    
+      <div class="search-model">
+        <div class="h-00 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure Aqui .....">
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scripts_form.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById('popupForm');
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
+        }
+    </script>
+    
+    </body>
+    
+    </html>

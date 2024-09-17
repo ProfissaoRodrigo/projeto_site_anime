@@ -1,3 +1,5 @@
+console.log('Script carregado');
+
 'use strict';
 
 (function ($) {
@@ -7,10 +9,12 @@
     --------------------*/
     $(window).on('load', function () {
         $(".loader").fadeOut();
-        $("#preloder").delay(200).fadeOut("slow");
+        setTimeout(function () {
+            $("#preloder").fadeOut("slow");
+        }, 200);
 
         /*------------------
-            FIlter
+            Filter
         --------------------*/
         $('.filter__controls li').on('click', function () {
             $('.filter__controls li').removeClass('active');
@@ -42,57 +46,107 @@
     });
 
     /*------------------
-		Navigation
-	--------------------*/
+        Navigation
+    --------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
     
     /*------------------
-		Pop-up Button
-	--------------------*/
+        Pop-up Button
+    --------------------*/
     function togglePopup() {
         var popup = document.getElementById('popupForm');
-        if (popup.style.display === 'block') {
-            popup.style.display = 'none';
+        if (popup) { // Verifique se o elemento existe
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
         } else {
-            popup.style.display = 'block';
+            console.error('Popup Form não encontrado');
         }
     }
     
-    function submitForm(event) {
-        event.preventDefault(); 
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
+    // Adicione verificação de existência antes de adicionar event listeners
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
         
-        // Adicionar validações ou enviar os dados para algum serviço/processamento      
-        // Requisição AJAX usando fetch API
-        fetch('url_do_seu_servidor_aqui', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                message: message
-            }),
-        })
-        .then(response => {
-            console.log('Dados enviados com sucesso!');
-            document.getElementById('contactForm').reset();
-            document.getElementById('popupForm').style.display = 'none';
-        })
-        .catch(error => {
-            console.error('Erro ao enviar os dados:', error);
+            const email = document.getElementById('emailInput').value;
+            const nickname = document.getElementById('nicknameInput').value;
+            const password = document.getElementById('passwordInput').value;
+        
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, nickname, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    document.getElementById('success-message').textContent = data.message;
+                    document.getElementById('error-message').textContent = ''; // Limpa a mensagem de erro
+                } else if (data.errors) {
+                    document.getElementById('error-message').textContent = data.errors.map(err => err.msg).join(', ');
+                    document.getElementById('success-message').textContent = ''; // Limpa a mensagem de sucesso
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                document.getElementById('error-message').textContent = 'Ocorreu um erro durante o cadastro.';
+            });
         });
+    } else {
+        console.error('Signup Form não encontrado');
     }
     
+    document.addEventListener('DOMContentLoaded', function () {
+        // Função de manipulação do formulário de login
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o comportamento padrão do formulário
+        
+                const email = document.getElementById('emailInput').value;
+                const password = document.getElementById('passwordInput').value;
+        
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        document.getElementById('success-message').textContent = data.message;
+                        document.getElementById('error-message').textContent = '';
+                    } else if (data.errors) {
+                        document.getElementById('error-message').textContent = data.errors.map(err => err.msg).join(', ');
+                        document.getElementById('success-message').textContent = '';
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    document.getElementById('error-message').textContent = 'Ocorreu um erro durante o login.';
+                });
+            });
+        } else {
+            console.error('Login Form não encontrado');
+        }
+        
+        // Outras funções como validação e manipulação de senha
+    });    
+    
     /*------------------
-		Hero Slider
-	--------------------*/
+        Hero Slider
+    --------------------*/
     var hero_s = $(".hero__slider");
     hero_s.owlCarousel({
         loop: true,
@@ -112,18 +166,20 @@
     /*------------------
     Characters
     --------------------*/
-
     const characters = document.querySelectorAll('.character');
-
-    characters.forEach((character) => {
-        character.addEventListener('click', () => {
-            removeSelectedCard();
-            character.classList.add('selected');
-            changeMainImage(character);
-            changeMainCharacterName(character);
-            changeDescription(character);
+    if (characters.length > 0) {
+        characters.forEach((character) => {
+            character.addEventListener('click', () => {
+                removeSelectedCard();
+                character.classList.add('selected');
+                changeMainImage(character);
+                changeMainCharacterName(character);
+                changeDescription(character);
+            });
         });
-    });
+    } else {
+        console.error('Nenhum personagem encontrado');
+    }
 
     function removeSelectedCard() {
         characters.forEach((character) => {
@@ -133,21 +189,32 @@
     
     function changeMainImage(character) {
         const mainImage = document.querySelector('.selected-character .main');
-        const characterImage = character.querySelector('img');
-        mainImage.src = characterImage.src;
-        mainImage.alt = characterImage.alt;
+        if (mainImage) {
+            const characterImage = character.querySelector('img');
+            mainImage.src = characterImage.src;
+            mainImage.alt = characterImage.alt;
+        } else {
+            console.error('Imagem principal não encontrada');
+        }
     }
     
     function changeMainCharacterName(character) {
         const characterName = document.getElementById('character-name');
-        characterName.textContent = character.dataset.name;
+        if (characterName) {
+            characterName.textContent = character.dataset.name;
+        } else {
+            console.error('Nome do personagem não encontrado');
+        }
     }
     
     function changeDescription(character) {
         const description = document.getElementById('description');
-        description.textContent = character.dataset.description;
+        if (description) {
+            description.textContent = character.dataset.description;
+        } else {
+            console.error('Descrição não encontrada');
+        }
     }
-
 
     /*------------------
         Video Player
@@ -168,35 +235,42 @@
     $("#scrollToTopButton").click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
-     });
+    });
 
-      /*------------------
+    /*------------------
         Validations
     --------------------*/
-    document.getElementById('emailInput').addEventListener('input', function() {
-        const emailInput = this;
-        const checkIcon = document.getElementById('emailCheckIcon');
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailInput = document.getElementById('emailInput');
+    if (emailInput) {
+        emailInput.addEventListener('input', function() {
+            const checkIcon = document.getElementById('emailCheckIcon');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+            if (emailInput.value.trim() !== '' && emailPattern.test(emailInput.value)) {
+                if (checkIcon) checkIcon.style.display = 'block';
+            } else {
+                if (checkIcon) checkIcon.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('Campo de e-mail não encontrado');
+    }
 
-        if (emailInput.value.trim() !== '' && emailPattern.test(emailInput.value)) {
-            checkIcon.style.display = 'block';
-        } else {
-            checkIcon.style.display = 'none';
-        }
-    });  
-
-    document.getElementById('passwordInput').addEventListener('input', function() {
-        const passwordInput = this;
-        const checkIcon = document.getElementById('passwordCheckIcon');
-
-        const isValidPassword = passwordInput.value.trim().length >= 8;
-
-        if (isValidPassword) {
-            checkIcon.style.display = 'block';
-        } else {
-            checkIcon.style.display = 'none';
-        }
-    });
+    const passwordInput = document.getElementById('passwordInput');
+    if (passwordInput) {
+        passwordInput.addEventListener('input', function() {
+            const checkIcon = document.getElementById('passwordCheckIcon');
+            const isValidPassword = passwordInput.value.trim().length >= 8;
+    
+            if (isValidPassword) {
+                if (checkIcon) checkIcon.style.display = 'block';
+            } else {
+                if (checkIcon) checkIcon.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('Campo de senha não encontrado');
+    }
 
     document.querySelectorAll('.toggle-password').forEach(icon => {
         icon.addEventListener('click', function () {
@@ -205,20 +279,23 @@
     
             this.classList.toggle('active');
     
-            if (input.type === 'password') {
-                input.type = 'text';
-                iconImg.src = '/img/Estilização/Imagens/sharingan-eye.png';
+            if (input && iconImg) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    iconImg.src = '/img/Estilização/Imagens/sharingan-eye.png';
+                } else {
+                    input.type = 'password';
+                    iconImg.src = '/img/Estilização/Imagens/eye-satoru-gojo.png';
+                }
             } else {
-                input.type = 'password';
-                iconImg.src = '/img/Estilização/Imagens/eye-satoru-gojo.png';
+                console.error('Campo de senha ou ícone não encontrado');
             }
         });
     });
-    
-          /*------------------
-        Social Conection
-    --------------------*/
 
+    /*------------------
+        Social Connection
+    --------------------*/
     $(document).ready(function(){
         $('.facebook').click(function(e){
             e.preventDefault();
@@ -233,10 +310,5 @@
             window.open('https://www.twitter.com', 'newwindow', 'width=600, height=400');
         });
     });
-
-
-
-
-
 
 })(jQuery);

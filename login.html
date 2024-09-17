@@ -128,23 +128,25 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Login</h3>
-                        <form action="#">
+                        <form id="loginForm" action="/login" method="post">
                             <div class="input__item">
                                 <div class="input-container">
-                                    <input type="email" id="emailInput" placeholder="Email" required>
+                                    <input type="email" id="emailInput" name="email" placeholder="Email" required>
                                     <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="emailCheckIcon">
                                     <span class="icon_mail"></span>
                                 </div>
                             </div>
                             <div class="input__item">
                                 <div class="input-container">
-                                    <input type="password" id="passwordInput" placeholder="Password" required>
+                                    <input type="password" id="passwordInput" name="password" placeholder="Password" required>
                                     <span class="icon_lock"></span>
                                     <span class="eye-icon toggle-password">
                                         <img src="/img/Estilização/Imagens/eye-satoru-gojo.png" alt="Mostrar/Ocultar Senha">
                                     </span>
                                     <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="passwordCheckIcon">
-                                </div>                                
+                                </div>
+                                <div id="success-message" style="color: green;"></div>
+                                <div id="error-message" style="color: red;"></div>
                             </div>                              
                             <button type="submit" class="site-btn">Login</button>
                         </form>
@@ -212,27 +214,26 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/player.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/mixitup.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/scripts_form.js"></script>
-<script type="text/javascript" src="js/slick.min.js"></script>
-<script>
-    function togglePopup() {
-        var popup = document.getElementById('popupForm');
-        if (popup.style.display === 'block') {
-            popup.style.display = 'none';
-        } else {
-            popup.style.display = 'block';
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scripts_form.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById('popupForm');
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
         }
-    }
-</script>
-
+    </script>
 </body>
 
 </html>

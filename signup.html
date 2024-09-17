@@ -9,8 +9,7 @@
     <title>Cadastro</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kosugi&display=swap" rel="stylesheet">
@@ -128,7 +127,7 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Cadastro</h3>
-                        <form action="#">
+                        <form id="signupForm" onsubmit="submitSignupForm(event)">
                             <div class="input__item">
                                 <div class="input-container">
                                     <input type="email" id="emailInput" placeholder="Email" required>
@@ -151,10 +150,12 @@
                                         <img src="/img/Estilização/Imagens/eye-satoru-gojo.png" alt="Mostrar/Ocultar Senha">
                                     </span>
                                     <img src="/img/Estilização/Imagens/check_icon.png" alt="Checkmark" class="input-icon" id="passwordCheckIcon">
-                                </div>                                
+                                </div>
                             </div>                              
-                            <button type="submit" class="site-btn">Login</button>
-                          </form>
+                            <button type="submit" class="site-btn">Cadastro</button>
+                        </form>   
+                            <div id="success-message" style="color: green;"></div>
+                            <div id="error-message" style="color: red;"></div>                            
                         <h5>Já possui uma conta? 😍 <a href="login.html">Acesse já!</a></h5>
                     </div>
                 </div>
@@ -172,64 +173,64 @@
         </div>
     </section>
 
-<footer class="footer">
-    <div class="page-up">
-        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="footer__logo">
-                    <a href="./index.html"><img src="img/Estilização/Imagens/anihon_go!_logo.png" alt=""></a>
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/Estilização/Imagens/anihon_go!_logo.png" alt=""></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="footer__nav">
-                    <ul>
-                        <li class="active"><a href="./index.html">Principal</a></li>
-                        <li><a href="./animes.html">Animes</a></li>
-                        <li><a href="./mangas.html">Mangás</a></li>
-                        <li><a href="./noticias.html">Notícias</a></li>
-                        <li><a href="./galeria.html">Galeria</a></li>
-                        <li><a href="guilda.html">Guilda</a></li>
-                    </ul>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Principal</a></li>
+                            <li><a href="./animes.html">Animes</a></li>
+                            <li><a href="./mangas.html">Mangás</a></li>
+                            <li><a href="./noticias.html">Notícias</a></li>
+                            <li><a href="./galeria.html">Galeria</a></li>
+                            <li><a href="guilda.html">Guilda</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+              </div>
           </div>
-      </div>
-  </footer>
-
-  <div class="search-model">
-    <div class="h-00 d-flex align-items-center justify-content-center">
-        <div class="search-close-switch"><i class="icon_close"></i></div>
-        <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Procure Aqui .....">
-        </form>
+      </footer>
+    
+      <div class="search-model">
+        <div class="h-00 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Procure Aqui .....">
+            </form>
+        </div>
     </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/player.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/mixitup.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/scripts_form.js"></script>
-<script type="text/javascript" src="js/slick.min.js"></script>
-<script>
-    function togglePopup() {
-        var popup = document.getElementById('popupForm');
-        if (popup.style.display === 'block') {
-            popup.style.display = 'none';
-        } else {
-            popup.style.display = 'block';
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scripts_form.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById('popupForm');
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
         }
-    }
-</script>
-
-</body>
-
-</html>
+    </script>
+    
+    </body>
+    
+    </html>
